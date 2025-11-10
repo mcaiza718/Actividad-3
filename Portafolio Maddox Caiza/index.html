@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio - Maddox Caiza</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-900 text-gray-100 font-sans">
+
+    <nav class="bg-gray-800 fixed w-full top-0 z-50 shadow-lg">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-indigo-400">Maddox Caiza</h1>
+        <ul class="flex space-x-6">
+          <li><a href="#inicio" class="hover:text-indigo-400">Inicio</a></li>
+          <li><a href="#sobre-mi" class="hover:text-indigo-400">Sobre mí</a></li>
+          <li><a href="#portafolio" class="hover:text-indigo-400">Portafolio</a></li>
+          <li><a href="#habilidades" class="hover:text-indigo-400">Habilidades</a></li>
+          <li><a href="#contacto" class="hover:text-indigo-400">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+<section id="inicio" class="h-screen flex flex-col justify-center items-center text-center px-4">
+  <img
+    src="assets/img/Mad.jpeg"
+    alt="Mad"
+    class="w-40 h-40 rounded-full border-4 border-indigo-500 mb-6 shadow-lg object-cover"
+  />
+  <h2 class="text-4xl sm:text-5xl font-bold text-indigo-400 mb-4">Hola, soy Maddox Caiza</h2>
+  <p class="text-lg sm:text-xl text-gray-300 max-w-2xl">
+    Soy alguien con bastante tiempo libre, me gusta usar mi tiempo para descubrir nuevas cosas.
+  </p>
+  <a
+    href="#portafolio"
+    class="mt-6 bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-md"
+  >
+    Ver mis proyectos
+  </a>
+</section>
+
+    <section id="sobre-mi" class="py-20 px-6 bg-gray-800 text-center">
+      <h2 class="text-3xl font-semibold mb-6 text-indigo-400">Sobre mí</h2>
+      <p class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
+        Soy un estudiante y me gusta aprender sobre programación y temas variados. Tengo varios diplomas de cursos sobre diseño y programación. Me gusta pasar tiempo con las personas que amo. Me gustaria dedicarme a la creacion de videojuegos algun dia.
+      </p>
+    </section>
+
+<section id="portafolio" class="min-h-screen flex flex-col justify-center items-center bg-[#0f172a] text-white px-4">
+  <h2 class="text-4xl font-bold mb-10 text-center">Mi Portafolio</h2>
+
+  <div class="bg-[#1e293b] rounded-2xl shadow-lg p-6 max-w-md text-center">
+    <h3 class="text-xl font-semibold mb-2">Proyecto destacado</h3>
+
+    <img
+      src="assets/img/asdf.png"
+      alt="Vista previa del proyecto"
+      class="w-full h-60 object-cover rounded-lg mb-4"
+    />
+
+    <h4 class="text-2xl font-bold mb-2">Estudio de Casos</h4>
+    <p class="text-gray-400 mb-6">Sistema de reservas para un restaurante.</p>
+
+    <a
+      href="assets/pdf/Maddox_CaizaAct1Desarrollo.pdf"
+      download
+      class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition duration-300"
+    >
+      Descargar Proyecto (PDF)
+    </a>
+  </div>
+</section>
+
+<section id="habilidades" class="py-20 px-6 bg-gray-800 text-center">
+  <h2 class="text-3xl font-semibold mb-6 text-indigo-400">Habilidades</h2>
+  <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+    <span class="bg-indigo-500 text-white px-4 py-2 rounded-lg shadow">HTML</span>
+    <span class="bg-indigo-500 text-white px-4 py-2 rounded-lg shadow">CSS</span>
+    <span class="bg-indigo-500 text-white px-4 py-2 rounded-lg shadow">JavaScript</span>
+    <span class="bg-indigo-500 text-white px-4 py-2 rounded-lg shadow">TailwindCSS</span>
+  </div>
+</section>
+
+    <section id="contacto" class="py-20 px-6 text-center">
+      <h2 class="text-3xl font-semibold mb-6 text-indigo-400">Contacto</h2>
+      <form id="form" class="max-w-lg mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+        <input type="text" name="name" placeholder="Tu nombre" class="w-full p-3 mb-4 bg-gray-900 border border-gray-700 rounded-lg" required>
+        <input type="email" name="email" placeholder="Tu correo" class="w-full p-3 mb-4 bg-gray-900 border border-gray-700 rounded-lg" required>
+        <textarea name="message" rows="4" placeholder="Tu mensaje" class="w-full p-3 mb-4 bg-gray-900 border border-gray-700 rounded-lg" required></textarea>
+        <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded-lg">Enviar mensaje</button>
+      </form>
+    </section>
+
+    <footer class="bg-gray-800 py-6 text-center text-gray-400">
+      © 2025 Maddox Caiza. Tarea hecha por mí, no robes, shu.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("2vuNRHlNqzwbvJfw-");
+      })();
+
+      const form = document.getElementById("form");
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        emailjs.sendForm("service_q8p0l3n", "template_eqa4nxo", this)
+          .then(() => alert("Mensaje enviado correctamente ✅"))
+          .catch(() => alert("Error al enviar el mensaje ❌"));
+      });
+    </script>
+  </body>
+</html>
